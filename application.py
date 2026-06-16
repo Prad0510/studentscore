@@ -6,7 +6,6 @@ from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 from sklearn.preprocessing import StandardScaler
 
 application=Flask(__name__)
-app = application
 
 ##route for a home page
 @app.route('/')
@@ -35,4 +34,4 @@ def predict_datapoint():
         return render_template('home.html', prediction=prediction[0])
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0")   
+    application.run(host="0.0.0.0")   
